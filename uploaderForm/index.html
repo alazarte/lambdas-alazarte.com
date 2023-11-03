@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>File Upload</title>
+    <link rel="stylesheet" type="text/css" href="https://alazarte.com/style.css"/>
+  </head>
+  <body>
+    <h1>Uploader</h1>
+    <p>Upload files or text snippets</p>
+
+    <button class="button" id="hideFileFormButton">File form</button>
+    <button class="button" id="hideSnippetFormButton">Snippet form</button>
+
+    <div id="uploadFileContainer">
+      <h2>Upload a file</h2>
+      <div id="uploadFileForm">
+        <input type="file" id="fileInput" class="formInputLeft">
+        <button id="uploadFileButton" class="formButtonRight">Upload File</button>
+      </div>
+    </div>
+
+    <div id="uploadSnippetContainer">
+      <h2>Upload a text snippet</h2>
+      <div id="uploadFileForm">
+        <div class="smallWidth">
+          <input class="maxWidth" placeholder="Snippet title" type="text" id="snippetTitleInput" onkeyup="return forceInput(this);" />
+          <textarea id="snippetAreaInput" class="maxWidth"></textarea>
+          <button id="uploadSnippetButton">Upload Snippet</button>
+        </div>
+      </div>
+    </div>
+
+    <pre id="progress"></pre>
+    <h2>Files uploaded</h2>
+    <button id="fileListRefreshButton">Refresh list</button>
+    <pre id="fileListDiv"></pre>
+    <script src="script.js"></script>
+  </body>
+</html>
